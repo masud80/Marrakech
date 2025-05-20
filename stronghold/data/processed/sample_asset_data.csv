@@ -1,0 +1,6 @@
+asset_id,name,owner,lease_status,production_rate,location,target
+1,Well Alpha,Ash Energy,Active,1200,Texas,1
+2,Well Beta,BlueRock LLC,Inactive,0,Oklahoma,0
+3,Field Gamma,Ash Energy,Leased,850,New Mexico,1
+4,Well Delta,GreenFields Inc,Active,1500,Texas,1
+5,Field Epsilon,BlueRock LLC,Expired,0,Colorado ,0
