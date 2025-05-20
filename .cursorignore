@@ -1,0 +1,19 @@
+# Add directories or file patterns to ignore during indexing (e.g. foo/ or *.csv)
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+
+# Node
+node_modules/
+build/
+dist/
+
+# Data
+
+!data/.gitkeep
+
+# Docker
+*.pid
