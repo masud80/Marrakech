@@ -1,13 +1,23 @@
 import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+from .asset_inventory import Base
 
-DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://ash_user:ash_password@postgres:5432/ash_inventory")
+# Determine host based on environment
+IN_DOCKER = os.environ.get("IN_DOCKER", "0") == "1"
+db_host = "postgres" if IN_DOCKER else "localhost"
+db_user = os.environ.get("POSTGRES_USER", "ash_user")
+db_pass = os.environ.get("POSTGRES_PASSWORD", "ash_password")
+db_name = os.environ.get("POSTGRES_DB", "ash_inventory")
+db_port = os.environ.get("POSTGRES_PORT", "5432")
+
+DATABASE_URL = os.getenv(
+    "DATABASE_URL",
+    f"postgresql://{db_user}:{db_pass}@{db_host}:{db_port}/{db_name}"
+)
 
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
-
-from .asset_inventory import Base
 
 # Create tables if they don't exist
 Base.metadata.create_all(bind=engine) 

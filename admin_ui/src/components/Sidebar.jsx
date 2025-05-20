@@ -29,7 +29,6 @@ export default function Sidebar() {
         <List>
           {navItems.map(({ text, icon, path }) => (
             <ListItem
-              button
               key={text}
               component={NavLink}
               to={path}
