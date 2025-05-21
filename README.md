@@ -1,4 +1,4 @@
-# Marrakech - No Cap Risk Analysis Platform
+# Marrakech
 
 This project is a local-first, modular data and analytics platform for Ash Investments. It supports data ingestion, inventory administration, machine learning/NLP services, and an admin UI.
 
