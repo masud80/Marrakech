@@ -2,6 +2,12 @@ import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from .asset_inventory import Base
+from .investment_management import (
+    Portfolio, Holding, Transaction, PerformanceMetric
+)
+from .financial_structuring import (
+    Deal, Instrument, Scenario, Document
+)
 
 # Determine host based on environment
 IN_DOCKER = os.environ.get("IN_DOCKER", "0") == "1"

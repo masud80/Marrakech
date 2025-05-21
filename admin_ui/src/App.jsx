@@ -4,6 +4,8 @@ import AssetInventory from './pages/AssetInventory';
 import MLModelStatus from './pages/MLModelStatus';
 import DataIngestion from './pages/DataIngestion';
 import Settings from './pages/Settings';
+import PortfolioDashboard from './pages/PortfolioDashboard';
+import DealDashboard from './pages/DealDashboard';
 import { Box } from '@mui/material';
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
           <Route path="/ml-models" element={<MLModelStatus />} />
           <Route path="/data-ingestion" element={<DataIngestion />} />
           <Route path="/settings" element={<Settings />} />
+          <Route path="/investment/portfolios" element={<PortfolioDashboard />} />
+          <Route path="/structuring/deals" element={<DealDashboard />} />
         </Routes>
       </Box>
     </Box>

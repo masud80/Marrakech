@@ -9,6 +9,8 @@ const drawerWidth = 220;
 
 const navItems = [
   { text: 'Asset Inventory', icon: <InventoryIcon />, path: '/assets' },
+  { text: 'Portfolios', icon: <AssessmentIcon />, path: '/investment/portfolios' },
+  { text: 'Deals', icon: <AssessmentIcon />, path: '/structuring/deals' },
   { text: 'ML Model Status', icon: <AssessmentIcon />, path: '/ml-models' },
   { text: 'Data Ingestion', icon: <StorageIcon />, path: '/data-ingestion' },
   { text: 'Settings', icon: <SettingsIcon />, path: '/settings' },
