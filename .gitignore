@@ -18,3 +18,7 @@
      # Docker
      *.pid
 node_modules
+.env
+*.csv
+backend/app/__pycache__/
+__pycache__
